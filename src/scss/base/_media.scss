@@ -7,14 +7,17 @@ img, svg {
   background-color: map-get($colors, secondary);
   display: flex;
   position: relative;
+  transition: all .3s ease-in-out;
 
   img {
     filter: grayscale(100%);
     mix-blend-mode: multiply;
     flex: 1 0 100%;
+    object-fit: cover;
+    transition: all .3s ease-in-out;
   }
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     left: 0;
@@ -24,5 +27,7 @@ img, svg {
     background-color: map-get($colors, primary);
     z-index: 1;
     mix-blend-mode: lighten;
+    transition: all .3s ease-in-out;
   }
+
 }
